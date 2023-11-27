@@ -87,3 +87,20 @@ a {
     background: #e7e5e5;
     border-radius: 5px;
 }
+
+.eye-img {
+    width: 1.5%;
+    position: absolute;
+    left: 57%;
+    top: 52%;
+    transform: translate(-50%, -50%);
+    cursor: pointer;
+    opacity: 0.7;
+}
+
+@media (max-width: 768px) {
+    .eye-img {
+        width: 2%;
+        left: 65%;
+    }
+}
