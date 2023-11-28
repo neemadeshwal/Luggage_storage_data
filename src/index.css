@@ -13,8 +13,8 @@ body {
   align-items: center;
   height: 100vh;
 }
-=======
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap');
+ /* LOGIN PAGE */
+/* @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap'); */
 
 body {
     height: 90vh;
@@ -166,5 +166,75 @@ a {
         width: 2%;
         left: 65%;
     }
+}
+
+
+/* Forget Password CSS*/
+/* @import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap'); */
+
+/*{
+    margin: 0;
+    padding: 0;
+    background-color: #3C9AE2;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    font-family: 'Poppins', sans-serif;
+}*/
+
+.forgetpass-container {
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    padding: 40px;
+    width: 400px;
+
+}
+
+.Mobile {
+    font-size: 0.8rem;
+    color: grey;
+}
+
+.form-group {
+    margin-bottom: 20px;
+    align-items: start;
+}
+
+label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+#Number {
+    width: 100%;
+    padding: 8px;
+    box-sizing: border-box;
+    border: none;
+    border-bottom: 2px solid rgb(189, 186, 186);
+    outline: none;
+}
+
+.forgetpass-btn {
+    background-color: #3C9AE2;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 12px;
+    width: 100%;
+}
+
+.forgetpass-btn:hover {
+    background-color: #10558a;
+}
+
+.signin {
+    text-decoration: none;
+    display: block;
+    text-align: center;
+    margin-top: 20px;
 }
 
