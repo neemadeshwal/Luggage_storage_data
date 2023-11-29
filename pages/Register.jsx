@@ -43,8 +43,8 @@ function handleRegisterSubmit(e){
 
     return(
     
-        <div id="register-form">
- _add_functionality
+        <div className="register-container">
+ 
           <div className="msg">
             
           </div>
@@ -52,16 +52,19 @@ function handleRegisterSubmit(e){
                     <img className='logo-img' src={register_icon} alt=""></img>
                 </div>
     <h2>Register</h2>
-    <form  method="post" onSubmit={handleRegisterSubmit}>
+    <form  method="post" className="register-form" onSubmit={handleRegisterSubmit}>
+    <div className="input-container">
+
       <input
-      className="fields"
        type="text"
         name="name" 
         placeholder="Enter your name" required
         onChange={handleInputChange}
         value={registerData.name}/>
+        </div>
+        <div className="input-container">
+
       <input 
-      className="fields"
       type="tel"
       name="registerNum"
       placeholder="Enter 10 Digit Mobile Number"
@@ -71,7 +74,8 @@ function handleRegisterSubmit(e){
       title="please enter your  10 digit number"
      
       required/>
-      <div className="password-container">
+      </div>
+      <div className="input-container">
       <input 
       type={type}
        name="registerPass" 
@@ -82,10 +86,10 @@ function handleRegisterSubmit(e){
        title="Must contain at least one number and one uppercase and lowercase letter, and at least 8 or more characters"
        required/>
       <span>
-          <img onClick={passHideToggle} className="eye-img" src={icon} alt="" />
+          <img onClick={passHideToggle} className="eye-img-icon" src={icon} alt="" />
         </span>
         </div>
-       <div className="password-container">
+       <div className="input-container">
       <input
        type={type} 
        name="registerConfirmPass" 
@@ -96,22 +100,14 @@ function handleRegisterSubmit(e){
         title="Must contain at least one number and one uppercase and lowercase letter, and at least 8 or more characters"
        required/>
       <span>
-          <img onClick={passHideToggle} className="eye-img" src={icon} alt="" />
+          <img onClick={passHideToggle} className="eye-img-icon" src={icon}  alt="" />
         </span>
         </div>
 
-            <div className='logo'>
-                    <img className='logo-img' src={register_icon} alt=""></img>
-                </div>
-    <h2>Register</h2>
-    <form id="form" action="#" method="post">
-      <input type="number" name="Mobile Number" placeholder="Enter 10 Digit Mobile Number" required/>
-      <input type="password" name="password" placeholder="Password" required/>
-      <input type="password" name="confirmPassword" placeholder="Confirm Password" required/>
- master
-      <button type="submit" id="register-btn">Sign Up</button>
+           
+      <button type="submit" className="register-btn">Sign Up</button>
     </form>
-    <p className='member' >Already a member?  <span><Link to="/login" id="login-link">Login here</Link></span> </p>
+    <p className='member' >Already a member?  <span><Link to="/login" className="login-link">Login here</Link></span> </p>
     
   </div>
     )

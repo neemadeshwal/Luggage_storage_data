@@ -90,7 +90,7 @@ export default function Home(){
                             </div>
                         </div>
                         <div id='row'>
-                            <div id='col' className='title'>Weight of the Language :</div>
+                            <div id='col' className='title'>Weight of the Luggage :</div>
                             <div id='col'><input type="number" placeholder='Enter Weight in KGs'/></div>
                         </div>
                         <div>
