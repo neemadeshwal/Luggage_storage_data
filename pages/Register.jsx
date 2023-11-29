@@ -44,6 +44,7 @@ function handleRegisterSubmit(e){
     return(
     
         <div id="register-form">
+ _add_functionality
           <div className="msg">
             
           </div>
@@ -98,6 +99,16 @@ function handleRegisterSubmit(e){
           <img onClick={passHideToggle} className="eye-img" src={icon} alt="" />
         </span>
         </div>
+
+            <div className='logo'>
+                    <img className='logo-img' src={register_icon} alt=""></img>
+                </div>
+    <h2>Register</h2>
+    <form id="form" action="#" method="post">
+      <input type="number" name="Mobile Number" placeholder="Enter 10 Digit Mobile Number" required/>
+      <input type="password" name="password" placeholder="Password" required/>
+      <input type="password" name="confirmPassword" placeholder="Confirm Password" required/>
+ master
       <button type="submit" id="register-btn">Sign Up</button>
     </form>
     <p className='member' >Already a member?  <span><Link to="/login" id="login-link">Login here</Link></span> </p>
