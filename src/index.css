@@ -1,23 +1,22 @@
+/*Login Page Css */
 @import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
-
 
 body {
     margin: 0;
     padding: 0;
     font-family: 'Poppins', sans-serif;
-
-    background: linear-gradient(#3C9AE2,#01766c );
+    background: linear-gradient(#3C9AE2, #01766c);
     display: flex;
     justify-content: center;
     align-items: center;
     height: 100vh;
     width: 100vw;
-    /* background-color: white; */
-  }
-.eye-img-icon{
+}
+
+.eye-img-icon {
     width: 15px;
     height: 15px;
-}  
+}
 
 .logo {
     display: flex;
@@ -29,9 +28,10 @@ body {
     width: 35%;
 }
 
-  /*register-css  */
 
-.register-container,.login-container,.forgetpass-container{
+.register-container,
+.login-container,
+.forgetpass-container {
     background-color: #fff;
     border-radius: 8px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
@@ -39,30 +39,24 @@ body {
     text-align: center;
     font-size: 15px;
     padding-bottom: 2rem;
-}  
-.forgetpass-container{
+}
+
+.forgetpass-container {
     padding: 2rem 10px;
 }
 
-.register-form,.login-form,.forget-pass-form{
+.register-form,
+.login-form,
+.forget-pass-form {
     width: 80%;
     margin: 1rem auto;
 }
-/* .register-form input{
-    margin: 5px auto;
-    height: 40px;
-    width: 80%;
-    border-radius: 5px;
-    border: none;
-    padding: 0 10px;
-    outline: none;
-    background: #e6e4e4;
-    
-} */
-.register-form .input-container,.forget-pass-form input{
+
+.register-form .input-container,
+.forget-pass-form input {
     display: flex;
     justify-content: space-between;
-    margin: 12px auto ;
+    margin: 12px auto;
     height: 40px;
     align-items: center;
     width: 100%;
@@ -72,26 +66,30 @@ body {
     outline: none;
     background: #e6e4e4;
 }
-.login-form .input-container{
+
+.login-form .input-container {
     display: flex;
     justify-content: space-between;
-    margin: 12px auto ;
+    margin: 12px 0px;
+    margin-right: 10px;
     height: 40px;
     align-items: center;
     width: 100%;
-    padding: 0px 10px;
+    padding: 0px 5px;
     border-radius: 5px;
     border: none;
     outline: none;
     background: #e6e4e4;
 }
-.input-container input{
+
+.input-container input {
     outline: none;
     border: none;
     background-color: #e6e4e4;
-    
+
 }
-.register-btn,.login-btn,.forget-pass-btn{
+
+.login-btn {
     background-color: #3C9AE2;
     color: #fff;
     border: none;
@@ -100,24 +98,29 @@ body {
     width: 105%;
     padding: 12px;
     margin-top: 10px;
-
-    &:hover{
-        background-color: #0f62a1;
-    }
-    
-
 }
-.member{
+
+.register-btn,
+.forget-pass-btn {
+    background-color: #3C9AE2;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    width: 82%;
+    padding: 12px;
+    margin-top: 10px;
+}
+
+.member {
     margin-top: 1rem;
     font-family: sans-serif;
 }
-.login-link{
+
+.login-link {
     text-decoration: none;
     color: #1c8ee6;
 }
-
-/* login-container */
-
 
 .lower {
     margin-top: -5px;
@@ -136,48 +139,50 @@ body {
     align-items: center;
     gap: 4px;
 }
-.lower input{
+
+.lower input {
     width: 15px;
     height: 15px;
 }
+
 .footer p {
     text-align: center;
     line-height: 4rem;
     border-radius: 5px;
     font-size: 14px;
     font-family: sans-serif;
-  
+
 }
-.forget-pass{
+
+.forget-pass {
     text-decoration: none;
-    color:#2076b8;
+    color: #2076b8;
     font-family: sans-serif;
 }
-.register-link{
+
+.register-link {
     text-decoration: none;
     color: #2076b8;
 }
 
-/* home-container */
-
+/* home-Page Css   */
 nav {
     display: flex;
     align-items: center;
     justify-content: space-around;
-    /* box-shadow: 0 2px 2px #ccc; */
     transition: all .5s ease;
     padding: 10px 10px;
     width: 100%;
+    gap: 70px;
 }
+
 
 .logo-head {
     display: flex;
     align-items: center;
-    gap: 5px;
 }
 
 .logo-head p {
-    margin-top: 50px;
     width: 40px;
     color: #000;
     font-size: 18px;
@@ -187,19 +192,17 @@ nav {
 }
 
 .logo-head img {
-    width: 12%;
+    width: 30%;
+    margin-bottom: 10px;
+
 }
 
 .nav-items {
     list-style: none;
     display: flex;
     padding: 0;
-    margin-top: 35px;
 }
 
-.right {
-    margin-top: 10px;
-}
 
 .nav-item {
     display: flex;
@@ -258,6 +261,7 @@ nav {
     right: -400px;
     height: 80vh;
     padding: 10px;
+    border-radius: 10px 0px 0px 10px;
     padding-left: 30px;
     box-shadow: 0 40px 60px #ccc;
     transition: all .5s ease-in-out;
@@ -310,6 +314,11 @@ nav {
     margin: 10px 10px;
 }
 
+.dropdown #lbox #box #row #col form .lform {
+    display: flex;
+    align-items: center;
+}
+
 .dropdown #lbox #head #close {
     transition: all 0.5s;
 }
@@ -323,14 +332,15 @@ nav {
     background: #ccc;
     cursor: pointer;
 }
-main{
- height: 70vh;
+
+main {
+    height: 70vh;
 }
+
 .dropdown #lbox #box #row .title {
     font-size: 20px;
     font-weight: 600;
     color: crimson;
-
 }
 
 #sub-btn {
@@ -378,9 +388,11 @@ footer p {
 }
 
 #footer-img {
-    width: 2%;
+    width: 3%;
     margin: 0px 10px;
+    margin-bottom: 10px;
 }
+
 @media (max-width:769px) {
     .nav-items {
         display: flex;
@@ -421,49 +433,10 @@ footer p {
     }
 }
 
+/*Register Form Css*/
 
-
-
-
-
-
-
-/* @import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap'); */
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap');
-
-
-body {
-    margin: 0;
-    padding: 0;
-    font-family: 'Poppins', sans-serif;
-    /* background: -webkit-linear-gradient(360deg, #01a99c 10%, #0698b1 360%); */
-    /* background-color: #3C9AE2; */
-    background: linear-gradient(#3C9AE2, #01766c);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-}
-
-
-/* LOGIN PAGE */
-/* @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap'); */
-/* Register Page Css 
-
- 
-
-
-/* body {
-    height: 90vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding: 10px;
-    background-color: #3C9AE2;
-    font-family: sans-serif;
-} */
-
-*/ .container {
+.container,
+.login-container {
     max-width: 700px;
     width: 350px;
     background-color: #fff;
@@ -484,7 +457,6 @@ body {
 }
 
 #register-form {
-
     background-color: #fff;
     border-radius: 8px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
@@ -494,7 +466,7 @@ body {
     padding-bottom: 1.5rem;
 }
 
-input {
+.password-container input {
     width: 100%;
     padding: 10px;
     margin: 8px 0;
@@ -515,7 +487,6 @@ input {
     width: 80%;
     margin-bottom: 1rem;
     margin-top: 12px;
-
     background-color: #fff;
     padding: 20px;
     border-radius: 8px;
@@ -533,19 +504,6 @@ input {
     border: none;
     border-radius: 4px;
     background-color: #e6e4e4;
-}
-
-#register-btn {
-    background-color: #3C9AE2;
-    color: #fff;
-    padding: 10px;
-    border: none;
-    border-radius: 4px;
-    cursor: pointer;
-    width: 100%;
-    margin-bottom: 1rem;
-    margin-top: 12px;
-
 }
 
 #register-btn:hover {
@@ -583,8 +541,8 @@ form .fields {
     padding: 0 10px;
     outline: none;
     background: #e6e4e4;
-
 }
+
 
 .password-container {
     display: flex;
@@ -628,148 +586,131 @@ form .btn {
 
 
 a {
+    text-decoration: none;
+    color: #3C9AE2;
+}
 
-    .lower p,
-    .footer p a {
+.lower {
+    margin-top: -5px;
+    margin-left: 7px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    gap: 2rem;
+    font-size: 12px;
+    font-family: sans-serif;
+    color: rgb(56, 55, 55);
+}
 
-        text-decoration: none;
-        color: #3C9AE2;
-    }
-
-    .lower {
-        margin-top: -5px;
-        margin-left: 7px;
-        display: flex;
-        justify-content: space-around;
-        align-items: center;
-        gap: 2rem;
-        font-size: 12px;
-        font-family: sans-serif;
-        color: rgb(56, 55, 55);
-    }
-
-    .lower .left {
-        display: flex;
-        align-items: center;
-        gap: 4px;
-    }
-
-    .lower input {
-        width: 15px;
-        height: 15px;
-    }
-
-    .footer p {
-        text-align: center;
-        line-height: 4rem;
-        border-radius: 5px;
-        font-size: 14px;
-        font-family: sans-serif;
-
-    }
-
-    .eye-img {
-        width: 15px;
-        height: 15px;
-        margin-top: 10px;
-
-        /* left: 57%;
-    top: 52%; */
-        /* transform: translate(-50%, -50%); */
-        cursor: pointer;
-        opacity: 0.7;
-    }
-
-    .msg {
-        width: 100%;
-        height: 4rem;
-        content: "";
-        display: none;
-        border-radius: rounded;
-        z-index: 20;
-    }
-
-    .display-failed {
-        background-color: rgb(243, 149, 149);
-        display: block;
-
-    }
-
-    @media (max-width: 768px) {
-        .eye-img {
-            width: 2%;
-            left: 65%;
-        }
-    }
-
-
-    /* Forget Password CSS*/
-    /* @import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap'); */
-
-    /*{
-    margin: 0;
-    padding: 0;
-    background-color: #3C9AE2;
+.lower .left {
     display: flex;
     align-items: center;
-    justify-content: center;
-    height: 100vh;
-    font-family: 'Poppins', sans-serif;
-}*/
+    gap: 4px;
+}
 
-    .forgetpass-container {
-        background-color: #fff;
-        border-radius: 8px;
-        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-        padding: 40px;
-        width: 400px;
+.lower input {
+    width: 15px;
+    height: 15px;
+}
 
+.footer p {
+    text-align: center;
+    line-height: 4rem;
+    border-radius: 5px;
+    font-size: 14px;
+    font-family: sans-serif;
+
+}
+
+.eye-img {
+    width: 15px;
+    height: 15px;
+    margin-top: 10px;
+
+    /* left: 57%;
+    top: 52%; */
+    /* transform: translate(-50%, -50%); */
+    cursor: pointer;
+    opacity: 0.7;
+}
+
+.msg {
+    width: 100%;
+    height: 4rem;
+    content: "";
+    display: none;
+    border-radius: rounded;
+    z-index: 20;
+}
+
+.display-failed {
+    background-color: rgb(243, 149, 149);
+    display: block;
+
+}
+
+@media (max-width: 768px) {
+    .eye-img {
+        width: 2%;
+        left: 65%;
     }
+}
 
-    .Mobile {
-        font-size: 0.8rem;
-        color: grey;
-    }
 
-    .form-group {
-        margin-bottom: 20px;
-        align-items: start;
-    }
+/* Forget Password CSS*/
 
-    label {
-        display: block;
-        margin-bottom: 5px;
-    }
 
-    #Number {
-        width: 100%;
-        padding: 8px;
-        box-sizing: border-box;
-        border: none;
-        border-bottom: 2px solid rgb(189, 186, 186);
-        outline: none;
-    }
+.forgetpass-container {
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    padding: 40px;
+    width: 400px;
 
-    .forgetpass-btn {
-        background-color: #3C9AE2;
-        color: #fff;
-        padding: 10px 20px;
-        border: none;
-        border-radius: 4px;
-        cursor: pointer;
-        font-size: 12px;
-        width: 100%;
-    }
+}
 
-    .forgetpass-btn:hover {
-        background-color: #10558a;
-    }
+.Mobile {
+    font-size: 0.8rem;
+    color: grey;
+}
 
-    .signin {
-        text-decoration: none;
-        display: block;
-        text-align: center;
-        margin-top: 20px;
-    }
+.form-group {
+    margin-bottom: 20px;
+    align-items: start;
+}
 
+label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+#Number {
+    width: 100%;
+    padding: 8px;
+    box-sizing: border-box;
+    border: none;
+    border-bottom: 2px solid rgb(189, 186, 186);
+    outline: none;
+}
+
+.forgetpass-btn {
+    background-color: #3C9AE2;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 12px;
+    width: 100%;
+}
+
+.forgetpass-btn:hover {
+    background-color: #10558a;
+}
+
+.signin {
+    text-decoration: none;
+    display: block;
+    text-align: center;
+    margin-top: 20px;
 }

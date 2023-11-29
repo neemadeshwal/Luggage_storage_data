@@ -1,4 +1,4 @@
-import luggage from './Assets/luggage.png';
+import luggage from './Assets/1630649608507__1_-removebg-preview (1).png';
 //import '../src/Components/Assets/Home.css';
 import {home} from 'react-icons-kit/icomoon/home';
 import Icon from 'react-icons-kit';
@@ -10,7 +10,7 @@ import {th} from 'react-icons-kit/fa/th';
 import {bars} from 'react-icons-kit/fa/bars';
 import {x} from 'react-icons-kit/feather/x';
 import { useState } from 'react';
-import basket from './Assets/1630649608507.jpeg'
+import basket from './Assets/1630649608507__1_-removebg-preview (1).png'
 export default function Home(){
 
  
@@ -34,7 +34,7 @@ export default function Home(){
         <nav>
             <div className='logo-head'>
                 <img className='logo-img' src={luggage} alt="" />
-                <p>Luggage Storage</p>
+                <p></p>
             </div>
             <div>
                 <ul className={navbar} id='navbar' >
@@ -73,16 +73,16 @@ export default function Home(){
                     <div id='row'>
                             <div id='col' className='title'>Size of the Luggage :</div>
                             <div id='col'>
-                                <form action="">
-                                    <div>
+                                <form action="" >
+                                    <div className='lform'>
                                     <input type='radio' id='large' name='size'></input>
                                     <label htmlFor='large'>Large</label>
                                     </div>
-                                    <div>
+                                    <div className='lform'>
                                     <input type='radio' id='medium' name='size'></input>
                                     <label htmlFor='medium'>Medium</label>
                                     </div>
-                                    <div>
+                                    <div className='lform'>
                                     <input type='radio' id='small' name='size'></input>
                                     <label htmlFor='small'>Small</label>
                                     </div>
@@ -91,7 +91,7 @@ export default function Home(){
                         </div>
                         <div id='row'>
                             <div id='col' className='title'>Weight of the Luggage :</div>
-                            <div id='col'><input type="number" placeholder='Enter Weight in KGs'/></div>
+                            <div id='col'><input type="number" className='weight' placeholder='Enter Weight in KGs'/></div>
                         </div>
                         <div>
                             <button onClick={close} id='sub-btn'>Submit</button>

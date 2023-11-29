@@ -25,7 +25,8 @@ export default function Register() {
       </div>
       <h2>Register</h2>
       <form method="post" onSubmit={handleRegisterSubmit}>
-        <input
+      <div className="password-container">
+      <input
           className="fields"
           type="text"
           name="name"
@@ -34,6 +35,8 @@ export default function Register() {
           onChange={handleInputChange}
           value={registerData.name}
         />
+      </div>
+        <div className="password-container">
         <input
           className="fields"
           type="tel"
@@ -45,6 +48,7 @@ export default function Register() {
           title="please enter your  10 digit number"
           required
         />
+        </div>
         <div className="password-container">
           <input
             type={type}
@@ -59,7 +63,7 @@ export default function Register() {
           <span>
             <img
               onClick={passHideToggle}
-              className="eye-img"
+              className="eye-img-icon"
               src={icon}
               alt=""
             />
@@ -79,14 +83,14 @@ export default function Register() {
           <span>
             <img
               onClick={passHideToggle}
-              className="eye-img"
+              className="eye-img-icon"
               src={icon}
               alt=""
             />
           </span>
         </div>
 
-        <button type="submit" id="register-btn">
+        <button type="submit" className="register-btn">
           Sign Up
         </button>
       </form>
@@ -100,75 +104,4 @@ export default function Register() {
       </p>
     </div>
   );
-}
-    return(
-    
-        <div className="register-container">
- 
-          <div className="msg">
-            
-          </div>
-             <div className='logo'>
-                    <img className='logo-img' src={register_icon} alt=""></img>
-                </div>
-    <h2>Register</h2>
-    <form  method="post" className="register-form" onSubmit={handleRegisterSubmit}>
-    <div className="input-container">
-
-      <input
-       type="text"
-        name="name" 
-        placeholder="Enter your name" required
-        onChange={handleInputChange}
-        value={registerData.name}/>
-        </div>
-        <div className="input-container">
-
-      <input 
-      type="tel"
-      name="registerNum"
-      placeholder="Enter 10 Digit Mobile Number"
-      onChange={handleInputChange}
-      value={registerData.registerNum}
-      pattern="[0-9]{10}"
-      title="please enter your  10 digit number"
-     
-      required/>
-      </div>
-      <div className="input-container">
-      <input 
-      type={type}
-       name="registerPass" 
-       placeholder="Password" 
-       onChange={handleInputChange}
-       value={registerData.registerPass}
-       pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" 
-       title="Must contain at least one number and one uppercase and lowercase letter, and at least 8 or more characters"
-       required/>
-      <span>
-          <img onClick={passHideToggle} className="eye-img-icon" src={icon} alt="" />
-        </span>
-        </div>
-       <div className="input-container">
-      <input
-       type={type} 
-       name="registerConfirmPass" 
-       placeholder="Confirm Password"
-       onChange={handleInputChange}
-       value={registerData.registerConfirmPass}
-       pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}"
-        title="Must contain at least one number and one uppercase and lowercase letter, and at least 8 or more characters"
-       required/>
-      <span>
-          <img onClick={passHideToggle} className="eye-img-icon" src={icon}  alt="" />
-        </span>
-        </div>
-
-           
-      <button type="submit" className="register-btn">Sign Up</button>
-    </form>
-    <p className='member' >Already a member?  <span><Link to="/login" className="login-link">Login here</Link></span> </p>
-    
-  </div>
-    )
 }
