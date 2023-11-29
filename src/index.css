@@ -1,9 +1,274 @@
-
-/* Register Page Css */
-
 @import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
 
+/* Home Page Design */
+nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    box-shadow: 0 2px 2px #ccc;
+    transition: all .5s ease;
+    padding: -10px 10px;
+}
+
+.logo-head {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.logo-head p {
+    margin-top: 50px;
+    width: 40px;
+    color: #000;
+    font-size: 18px;
+    font-family: "Poppins";
+    line-height: 24px;
+    text-decoration: none;
+}
+
+.logo-head img {
+    width: 12%;
+}
+
+.nav-items {
+    list-style: none;
+    display: flex;
+    padding: 0;
+    margin-top: 35px;
+}
+
+.right {
+    margin-top: 10px;
+}
+
+.nav-item {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    margin: 0px 10px;
+}
+
+.nav-link {
+    text-decoration: none;
+    color: #a7a7a7;
+    transition: all .3s;
+    font-size: 18px;
+
+}
+
+.nav-items .nav-item:hover {
+    color: #000;
+}
+
+.nav-items .nav-item:hover .nav-link,
+.nav-items .nav-item:hover .icon {
+    color: #000;
+}
+
+.nav-link,
+.icon {
+    text-decoration: none;
+    color: #a7a7a7;
+    transition: color 0.2s;
+    font-size: 18px;
+}
+
+.icon {
+    margin-top: -3px;
+}
+
+.bar-icon {
+    opacity: 0.5;
+    transition: opacity 0.2s;
+    cursor: pointer;
+}
+
+.bar-icon:hover {
+    opacity: 1;
+}
+
+.hamburger {
+    margin-top: 10px;
+    opacity: 0;
+}
+
+.dropdown {
+    width: 300px;
+    position: fixed;
+    right: -400px;
+    height: 80vh;
+    padding: 10px;
+    padding-left: 30px;
+    box-shadow: 0 40px 60px #ccc;
+    transition: all .5s ease-in-out;
+}
+
+.dropdown.active {
+    right: 0px;
+}
+
+.dropdown #lbox {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.dropdown #lbox #head {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.dropdown #lbox #head h3 {
+    font-size: 28px;
+}
+
+.dropdown #lbox #box {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 10px;
+}
+
+.dropdown #lbox #box #row {
+    display: flex;
+    flex-direction: column;
+}
+
+.dropdown #lbox #box #row #col {
+    margin: 5px 0px;
+}
+
+.dropdown #lbox #box #row #col input[type='number'] {
+    width: 80%;
+    height: 24px;
+    padding-left: 10px;
+}
+
+.dropdown #lbox #box #row #col form input[type='radio'] {
+    margin: 10px 10px;
+}
+
+.dropdown #lbox #head #close {
+    transition: all 0.5s;
+}
+
+.dropdown #lbox #head #close:hover {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    padding: 10px;
+    background: #ccc;
+    cursor: pointer;
+}
+
+.dropdown #lbox #box #row .title {
+    font-size: 20px;
+    font-weight: 600;
+    color: crimson;
+
+}
+
+#sub-btn {
+    background: #3C9AE2;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 5px;
+    color: #fff;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+section {
+    padding: 70px 15%;
+    scroll-behavior: smooth;
+}
+
+#container {
+    overflow: hidden;
+}
+
+.container-img {
+    opacity: 0.6;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    bottom: -8px;
+    color: #000;
+
+
+}
+
+footer p {
+    text-align: center;
+    margin-bottom: 20px;
+    padding-bottom: 10px;
+}
+
+#footer-img {
+    width: 2%;
+    margin: 0px 10px;
+}
+
+@media (max-width:769px) {
+    .nav-items {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: flex-start;
+        position: fixed;
+        top: 80px;
+        right: -300px;
+        width: 200px;
+        height: 100vh;
+        background-color: #ffd7d7;
+        box-shadow: 0 40px 60px #ccc;
+        transition: all .5s ease-in-out;
+    }
+
+    nav {
+        display: flex;
+        align-items: center;
+    }
+
+    .nav-items.active {
+        right: 0px;
+    }
+
+    .hamburger {
+        opacity: 1;
+        margin-right: 20px;
+    }
+
+    .nav-item {
+        margin: 20px 15px;
+    }
+
+    .nav-link {
+        font-size: 20px;
+        color: #848080;
+    }
+}
+
+
+
+
+
+
+
+
+
 body {
+ Forget_password_page
   margin: 0;
   padding: 0;
   font-family: 'Poppins', sans-serif;
@@ -15,6 +280,15 @@ body {
 }
  /* LOGIN PAGE */
 /* @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap'); */
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+    height: 100vh;
+}
+
+/* Register Page Css 
+
+ master
 
 body {
     height: 90vh;
@@ -26,6 +300,7 @@ body {
     font-family: sans-serif;
 }
 
+*/
 .container {
     max-width: 700px;
     width: 350px;
@@ -47,46 +322,47 @@ body {
 }
 
 #register-form {
-  background-color: #fff;
-  padding: 20px;
-  border-radius: 8px;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-  width: 320px;
-  text-align: center;
-  font-size: 15px;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    width: 320px;
+    text-align: center;
+    font-size: 15px;
 }
 
-input {
-  width: 100%;
-  padding: 10px;
-  margin: 8px 0;
-  box-sizing: border-box;
-  border: none;
-  border-radius: 4px;
-  background-color: #e6e4e4;
+#form input {
+    width: 100%;
+    padding: 10px;
+    margin: 8px 0;
+    box-sizing: border-box;
+    border: none;
+    border-radius: 4px;
+    background-color: #e6e4e4;
 }
 
 #register-btn {
-  background-color: #3C9AE2;
-  color: #fff;
-  padding: 10px;
-  border: none;
-  border-radius: 4px;
-  cursor: pointer;
-  width: 100%;
-  margin-bottom: 1rem;
-  margin-top: 12px;
+    background-color: #3C9AE2;
+    color: #fff;
+    padding: 10px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    width: 100%;
+    margin-bottom: 1rem;
+    margin-top: 12px;
 }
 
 #register-btn:hover {
-  background-color: #3C9AE2;
+    background-color: #3C9AE2;
 }
 
 #login-link {
-  color: #3C9AE2;
-  text-decoration: none;
+    color: #3C9AE2;
+    text-decoration: none;
 }
-.member{
+
+.member {
     color: grey;
     font-size: 15px;
     font-family: sans-serif;
@@ -97,7 +373,7 @@ input {
     margin: 20px auto;
 }
 
-form {
+#form {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -128,7 +404,8 @@ form .btn {
     background: #3C9AE2;
 }
 
-a {
+.lower p,
+.footer p a {
     text-decoration: none;
     color: #3C9AE2;
 }
@@ -166,6 +443,7 @@ a {
         width: 2%;
         left: 65%;
     }
+ Forget_password_page
 }
 
 
@@ -238,3 +516,5 @@ label {
     margin-top: 20px;
 }
 
+}
+ master

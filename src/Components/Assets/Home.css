@@ -1,0 +1,11 @@
+body {
+    background: #fff;
+}
+
+.logo-img {
+    width: 15%;
+}
+
+nav {
+    display: flex;
+}
