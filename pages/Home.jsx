@@ -12,6 +12,8 @@ import {x} from 'react-icons-kit/feather/x';
 import { useState } from 'react';
 import basket from './Assets/1630649608507.jpeg'
 export default function Home(){
+
+ 
     const [menuopen,setmenuopen] = useState(bars);
     const [navbar,setnavber] = useState('nav-items');
     const [window,setwindow] = useState('dropdown');
@@ -26,6 +28,7 @@ export default function Home(){
         setwindow('dropdown');
     }
     
+
     return(
         <>
         <nav>

@@ -1,49 +1,113 @@
-import { useState } from 'react';
-import eyeon from './Assets/eye.png';
-import eyeoff from './Assets/hidden.png';
+import { useState,useEffect } from 'react';
+import { useGlobalContext } from '../src/context';
+import { Link,useNavigate } from 'react-router-dom';
 import profile from './Assets/png-transparent-computer-icons-user-login-swiggy-blue-text-computer-removebg-preview.png';
 
 export default function Login() {
-  const [type, setType] = useState('password');
-  const [icon, setIcon] = useState(eyeoff);
+  const {passHideToggle,
+    type,
+    icon,
+    handleInputChange,
+    loginData,
+  loginChecked,
+   handleLoginChecked}=useGlobalContext()
+   const navigate=useNavigate()
 
-  const handleToggle = () => {
-    setType((prevState) => (prevState === 'text' ? 'password' : 'text'));
+ let  isLoggedIn=true
 
-    
-    setIcon((prevIcon) => (prevIcon === eyeoff ? eyeon : eyeoff));
-  };
 
+const[userExist,setUserExist]=useState(false)
+//    function userAuthentication(){
+//     const loginInfo=JSON.parse(localStorage.getItem("User-LoginData"))
+//       console.log(loginInfo)
+//     const registerdAccounts=JSON.parse(localStorage.getItem("User-registerData"))  
+//      const findAccount=registerdAccounts.filter((account)=>
+      
+
+//       account.registerNum==loginData.loginPhno && account.registerPass==loginData.loginPassword)
+            
+      
+      
+//       // account.registerNum==loginData.loginPhno && account.registerPass==loginData.loginPassword})
+//     console.log(findAccount)
+//      if(findAccount){
+//       setUserExist(true)
+//       console.log("yes account exist")
+//      }
+//      else{
+//       setUserExist(false)
+//      }
+//      if(loginInfo && userExist){
+//         navigate("/")
+//       }
+//       else{
+//         console.log("no user found")
+//         return;
+//       }
+//    }
+ 
+//   useEffect(()=>{
+//     userAuthentication()
+// },[])
+
+   function handleLoginSubmit(e){
+ 
+    e.preventDefault()
+    console.log(loginData.loginPhno)
+   if(loginData.loginPhno &&  loginData.loginPassword){
+    console.log(loginChecked,isLoggedIn)
+    console.log("got data")
+    if(loginChecked&&isLoggedIn){
+     localStorage.setItem("User-LoginData",JSON.stringify(loginData))
+      console.log("saved to local storage")
+       navigate("/")
+    }
+   }
+   else {
+    console.log("Please provide credentials")
+
+   }
+   console.log(loginData)
+  
+  }
   return (
     <div className="container">
       <div className="logo">
         <img className="logo-img" src={profile} alt="" />
       </div>
       <h2 className="heading">Sign In</h2>
-      <form action="/login" method="POST">
+      <form onSubmit={handleLoginSubmit} action="/login" method="POST">
         <input
           className="fields"
           type="tel"
+          name="loginPhno"
           placeholder="Enter your Phone"
-          pattern="[0-9]{10}"
+          onChange={handleInputChange}
+          value={loginData.loginPhno}
+          // pattern="[0-9]{10}"
           required
         />
+        <div className='password-container'>
         <input
           className="fields"
           type={type}
+          name="loginPassword"
           placeholder="Enter your password"
+          onChange={handleInputChange}
+          value={loginData.loginPassword}
           required
         />
         <span>
-          <img onClick={handleToggle} className="eye-img" src={icon} alt="" />
+          <img onClick={passHideToggle} className="eye-img" src={icon} alt="" />
         </span>
+        </div>
         <button className="btn" type="submit">
           Sign In
         </button>
       </form>
       <div className="lower">
         <div className="left">
-          <input type="checkbox" />
+          <input type="checkbox" onChange={handleLoginChecked} value={loginChecked} />
           <p>Remember me</p>
         </div>
         <p>
@@ -52,7 +116,7 @@ export default function Login() {
       </div>
       <div className="footer">
         <p>
-          Not a Member? <a href="#">Create an Account</a>
+          Not a Member? <Link to="/register">Create an Account</Link>
         </p>
       </div>
     </div>
