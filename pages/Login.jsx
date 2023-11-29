@@ -71,12 +71,13 @@ const[userExist,setUserExist]=useState(false)
   
   }
   return (
-    <div className="container">
+    <div className="login-container">
       <div className="logo">
         <img className="logo-img" src={profile} alt="" />
       </div>
       <h2 className="heading">Sign In</h2>
-      <form onSubmit={handleLoginSubmit} action="/login" method="POST">
+      <form onSubmit={handleLoginSubmit} action="/login" className='login-form' method="POST">
+        <div className='input-container'>
         <input
           className="fields"
           type="tel"
@@ -87,7 +88,8 @@ const[userExist,setUserExist]=useState(false)
           // pattern="[0-9]{10}"
           required
         />
-        <div className='password-container'>
+        </div>
+        <div className='input-container'>
         <input
           className="fields"
           type={type}
@@ -98,10 +100,10 @@ const[userExist,setUserExist]=useState(false)
           required
         />
         <span>
-          <img onClick={passHideToggle} className="eye-img" src={icon} alt="" />
+          <img onClick={passHideToggle} className="eye-img-icon" src={icon} alt="" />
         </span>
         </div>
-        <button className="btn" type="submit">
+        <button className="login-btn" type="submit">
           Sign In
         </button>
       </form>
@@ -111,12 +113,12 @@ const[userExist,setUserExist]=useState(false)
           <p>Remember me</p>
         </div>
         <p>
-          <a href="#">Forgot Password?</a>
+          <Link  className="forget-pass" to="/forgetpass">Forgot Password?</Link>
         </p>
       </div>
       <div className="footer">
         <p>
-          Not a Member? <Link to="/register">Create an Account</Link>
+          Not a Member? <Link className='register-link' to="/register">Create an Account</Link>
         </p>
       </div>
     </div>
