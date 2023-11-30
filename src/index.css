@@ -762,6 +762,8 @@ label {
             color: #848080;
         }
     }
-      
+    input{
+            background-color: transparent;
+        }
     
 
