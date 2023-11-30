@@ -87,6 +87,7 @@ body {
     border: none;
     background-color: #e6e4e4;
 
+
 }
 
 .login-btn {
@@ -99,7 +100,10 @@ body {
     padding: 12px;
     margin-top: 10px;
 }
-
+input {
+    border: none;
+    outline: none;
+}
 .register-btn,
 .forget-pass-btn {
     background-color: #3C9AE2;
@@ -110,6 +114,9 @@ body {
     width: 82%;
     padding: 12px;
     margin-top: 10px;
+}
+.forget-pass-btn{
+    width: 100%;
 }
 
 .member {
@@ -173,13 +180,14 @@ nav {
     transition: all .5s ease;
     padding: 10px 10px;
     width: 100%;
-    gap: 70px;
+    gap: 30px;
 }
 
 
 .logo-head {
     display: flex;
     align-items: center;
+    gap: 1rem;
 }
 
 .logo-head p {
@@ -192,8 +200,10 @@ nav {
 }
 
 .logo-head img {
-    width: 30%;
+    width: 15%;
     margin-bottom: 10px;
+    object-fit: cover;
+
 
 }
 
@@ -393,45 +403,7 @@ footer p {
     margin-bottom: 10px;
 }
 
-@media (max-width:769px) {
-    .nav-items {
-        display: flex;
-        flex-direction: column;
-        align-items: flex-start;
-        justify-content: flex-start;
-        position: fixed;
-        top: 80px;
-        right: -300px;
-        width: 200px;
-        height: 100vh;
-        background-color: #ffd7d7;
-        box-shadow: 0 40px 60px #ccc;
-        transition: all .5s ease-in-out;
-    }
 
-    nav {
-        display: flex;
-        align-items: center;
-    }
-
-    .nav-items.active {
-        right: 0px;
-    }
-
-    .hamburger {
-        opacity: 1;
-        margin-right: 20px;
-    }
-
-    .nav-item {
-        margin: 20px 15px;
-    }
-
-    .nav-link {
-        font-size: 20px;
-        color: #848080;
-    }
-}
 
 /*Register Form Css*/
 
@@ -649,12 +621,6 @@ a {
 
 }
 
-@media (max-width: 768px) {
-    .eye-img {
-        width: 2%;
-        left: 65%;
-    }
-}
 
 
 /* Forget Password CSS*/
@@ -714,3 +680,88 @@ label {
     text-align: center;
     margin-top: 20px;
 }
+.E-404-img{
+    width: 400px;
+    height: 200px;
+    object-fit: cover;
+    
+}
+.E-404-title,.E-404-text{
+    text-align: center;
+    color: white;
+}
+.E-404-title{
+    font-size: 2.5rem;
+    
+}
+.E-404-text{
+    font-size: 1.5rem;
+    display: inline;
+}
+.home-link{
+    border: 0;
+    border-radius: 10px;
+    padding: 10px 1rem;
+    font-size: 1.1rem;
+    background-color: rgb(75, 212, 11);
+    color: white;
+    &:hover{
+        background-color: rgb(66, 169, 18);
+    }
+}
+@media (max-width:769px) {
+  
+        body {
+            width: 96%;
+        }
+    
+        .eye-img {
+            width: 2%;
+            left: 65%;
+        }
+    
+        .nav-items {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            justify-content: flex-start;
+            position: fixed;
+            top: 80px;
+            right: -300px;
+            width: 200px;
+            height: 100vh;
+            background-color: #ffd7d7;
+            border-radius: 20px 0px 0px 20px;
+            box-shadow: 0 40px 60px #ccc;
+            transition: all .5s ease-in-out;
+        }
+    
+        nav {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+    
+        .nav-items.active {
+            right: 0px;
+        }
+    
+        .hamburger {
+            opacity: 1;
+            margin-right: 20px;
+            margin-bottom: 10px;
+            cursor: pointer;
+        }
+    
+        .nav-item {
+            margin: 20px 15px;
+        }
+    
+        .nav-link {
+            font-size: 20px;
+            color: #848080;
+        }
+    }
+      
+    
+

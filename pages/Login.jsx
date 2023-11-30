@@ -2,6 +2,8 @@ import { useState, useEffect } from 'react';
 import { useGlobalContext } from '../src/context';
 import { Link, useNavigate } from 'react-router-dom';
 import profile from './Assets/png-transparent-computer-icons-user-login-swiggy-blue-text-computer-removebg-preview.png';
+import { userAuthentication } from '../src/utils/userAuthenticate';
+import {toast} from "react-toastify"
 
 export default function Login() {
   const {
@@ -17,26 +19,43 @@ export default function Login() {
 
   const [isLoggedIn, setIsLoggedIn] = useState(true);
 
+  useEffect(()=>{
+   if(userAuthentication()){
+    navigate("/")
+   }
+   else{
+    navigate("/login")
+   }
+  
+  },[isLoggedIn])
+
   const handleLoginSubmit = (e) => {
     e.preventDefault();
+        // Perform user authentication here, e.g., check against stored data
 
     if (loginData.loginPhno && loginData.loginPassword) {
-      if (loginChecked && isLoggedIn) {
-        // Perform user authentication here, e.g., check against stored data
-        const registerdAccounts = JSON.parse(localStorage.getItem("User-registerData")) || [];
-        const findAccount = registerdAccounts.find((account) =>
-          account.registerNum === loginData.loginPhno && account.registerPass === loginData.loginPassword
-        );
-
-        if (findAccount) {
+      const registerdAccounts = JSON.parse(localStorage.getItem("User-registerData")) || [];
+      const findAccount = registerdAccounts.find((account) =>
+        account.registerNum === loginData.loginPhno && account.registerPass === loginData.loginPassword
+      );
+      console.log(findAccount)
+      if(findAccount){
+        if(loginChecked){
           localStorage.setItem("User-LoginData", JSON.stringify(loginData));
-          navigate("/");
-        } else {
+          console.log("data-loggedin")
+        }
+        navigate("/")
+      }
+  
+        else {
           console.log("No user found");
+      toast.error("No user found")
+
         }
       }
-    } else {
+     else {
       console.log("Please provide credentials");
+      toast.error("Please provide credentials")
     }
   };
 

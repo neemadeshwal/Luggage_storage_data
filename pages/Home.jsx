@@ -1,4 +1,4 @@
-import luggage from './Assets/1630649608507__1_-removebg-preview (1).png';
+import luggage from './Assets/luggage.png';
 //import '../src/Components/Assets/Home.css';
 import {home} from 'react-icons-kit/icomoon/home';
 import Icon from 'react-icons-kit';
@@ -9,32 +9,48 @@ import {briefcase} from 'react-icons-kit/feather/briefcase';
 import {th} from 'react-icons-kit/fa/th';
 import {bars} from 'react-icons-kit/fa/bars';
 import {x} from 'react-icons-kit/feather/x';
-import { useState } from 'react';
+import { useEffect, useState,useRef } from 'react';
+import {toast} from "react-toastify"
 import basket from './Assets/1630649608507__1_-removebg-preview (1).png'
+
 export default function Home(){
 
- 
     const [menuopen,setmenuopen] = useState(bars);
     const [navbar,setnavber] = useState('nav-items');
     const [window,setwindow] = useState('dropdown');
+    
     const handleToggle = () => {
+        if(window==="dropdown active"){
+            setwindow("dropdown")
+        }
         setmenuopen((prevIcon) => (prevIcon === bars ? x : bars));
         setnavber((prevNavbar) => (prevNavbar === 'nav-items' ? 'nav-items active' : 'nav-items'));
     };
     const handleWindow = ()=>{
+        if(navbar==="nav-items active"){
+            setnavber("nav-items")
+            setmenuopen(bars)
+        }
         setwindow((prevWindow) => (prevWindow === 'dropdown' ? 'dropdown active' : 'dropdown'));
     }
     const close = ()=>{
         setwindow('dropdown');
     }
-    
+   
+useEffect(()=>{
+
+    toast.success(`welcome back!!`, {
+        toastId: 'success1',
+    })
+},[])
 
     return(
         <>
+       
         <nav>
             <div className='logo-head'>
-                <img className='logo-img' src={luggage} alt="" />
-                <p></p>
+                <img className='logo-img' src={luggage}  alt="" />
+                <p>Luggage Storage</p>
             </div>
             <div>
                 <ul className={navbar} id='navbar' >

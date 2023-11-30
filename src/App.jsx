@@ -3,7 +3,7 @@ import React from "react";
 import { BrowserRouter, Route, Routes,Navigate } from "react-router-dom"
 import "./index.css"
 
-import { Home, Register, Login,Forget_pass } from "./index"
+import { Home, Register, Login,Forget_pass,Error_404 } from "./index"
 export default function App() {
   let loggedIn=false
   return (
@@ -14,6 +14,7 @@ export default function App() {
         <Route path="/login" element={<Login />} />
         <Route path="/register" element={<Register />} />
         <Route path="/forgetpass" element={<Forget_pass />} />
+        <Route path="*" element={<Error_404/>}/>
 
       </Routes>
     </BrowserRouter>

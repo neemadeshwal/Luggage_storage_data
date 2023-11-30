@@ -1,6 +1,7 @@
 import register_icon from "../src/Components/assets/logo.png";
 import { useGlobalContext } from "../src/context";
 import { Link, useNavigate } from "react-router-dom";
+import {toast} from "react-toastify"
 
 export default function Register() {
   const navigate = useNavigate();
@@ -12,14 +13,36 @@ export default function Register() {
     registerData,
   } = useGlobalContext();
 
+  const getRegisterUserArray=JSON.parse(localStorage.getItem("User-registerData"))|| []
+
   function handleRegisterSubmit(e) {
     e.preventDefault();
-    // Your registration logic here
-  }
+    if(registerData.registerPass===registerData.registerConfirmPass){
+      getRegisterUserArray.push(registerData)
+      console.log("created register data")
+      console.log(getRegisterUserArray)
+      localStorage.setItem("User-registerData",JSON.stringify(getRegisterUserArray))
+      toast.success("Account successfully created", {
+        toastId: 'success2',
+    })
+     
+   
+      setTimeout(()=>navigate("/login"),3000)
+    }
+    else{
+    console.log("password donot match")  
+    toast.error("Password doesnot match.Please try again!!")    
+      
+      }
+    }
+   
+  
+  
+
+  
 
   return (
     <div id="register-form">
-      <div className="msg"></div>
       <div className="logo">
         <img className="logo-img" src={register_icon} alt="" />
       </div>
